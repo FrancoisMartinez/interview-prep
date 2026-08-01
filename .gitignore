@@ -1,0 +1,10 @@
+# Your solutions and imported problems live in their own repo (problems/.git).
+# This repo is the framework only.
+problems/
+
+.venv/
+.cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.vscode/*.log

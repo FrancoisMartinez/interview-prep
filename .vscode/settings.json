@@ -1,0 +1,25 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  // Deliberately narrower than pytest.ini's `testpaths`: the Test Explorer
+  // stays a practice board showing only your problems. The harness's own
+  // tests in tests/ run on a bare `pytest` from the terminal.
+  "python.testing.pytestArgs": ["problems"],
+  "python.testing.autoTestDiscoverOnSaveEnabled": true,
+
+  // So Pylance resolves `from lib.lcnodes import ...` inside problems/*/solution.py
+  "python.analysis.extraPaths": ["."],
+
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.pytest_cache": true,
+    "**/.cache": true
+  },
+
+  "[python]": {
+    "editor.rulers": [88],
+    "editor.tabSize": 4
+  }
+}
