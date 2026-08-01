@@ -12,22 +12,23 @@ of what's available is [`roadmap.md`](roadmap.md) (NeetCode 150).
 This one is the framework: the importer, the test harness, the catalog. It has
 no problems and no solutions in it.
 
-`problems/` is a **separate repo** nested inside this checkout (and gitignored
-here) holding imported problems and solutions. Keeping them apart means the
-framework stays shareable while progress stays its own history.
+`problems/` is where imports land. It's gitignored here, so you can make it a
+repo of its own and keep your solutions on a separate (probably private)
+history from the framework.
 
 To set up from scratch:
 
 ```
-git clone <this repo> interview-prep
+git clone https://github.com/FrancoisMartinez/interview-prep
 cd interview-prep
-git clone <progress repo> problems      # or just start importing
 py -3.12 -m venv .venv
 .venv\Scripts\python -m pip install -r requirements.txt
+.venv\Scripts\python tools\lc.py import two-sum
 ```
 
-Nothing in the tooling knows about the split — `problems/` is just a directory
-as far as it's concerned.
+If you keep solutions in their own repo, clone it into `problems/` before you
+start importing. Nothing in the tooling knows about the split — `problems/` is
+just a directory as far as it's concerned.
 
 ---
 
