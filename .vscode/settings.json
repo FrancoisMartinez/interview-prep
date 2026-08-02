@@ -12,6 +12,16 @@
   // So Pylance resolves `from lib.lcnodes import ...` inside problems/*/solution.py
   "python.analysis.extraPaths": ["."],
 
+  // Practice mode: no AI ghost text while you're solving. Copilot's inline
+  // completions happily reproduce a whole LeetCode solution from the signature.
+  // Copilot Chat and the Claude Code extension are untouched — ask when stuck,
+  // but nothing types the answer for you.
+  // The status-bar Copilot toggle writes *user* settings, so it can't override
+  // these. Flip them here if you ever want completions back in this repo.
+  "github.copilot.enable": { "*": false },
+  "github.copilot.nextEditSuggestions.enabled": false,
+  "editor.inlineSuggest.enabled": false,
+
   "files.exclude": {
     "**/__pycache__": true,
     "**/.pytest_cache": true,
